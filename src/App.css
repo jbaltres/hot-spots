@@ -1,4 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  text-align: center;
+  height: 100vh;
+}
+
+.header {
+  background-color: #00a878;
+  height: 50px;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.filterlist {
+  display: flex;
+  width: 100%;
+  background-color: #d8f1a0;
+  align-items: center;
+  justify-content: space-around;
+  border: solid 1px;
+  flex-grow: 0;
+}
+
+.filter {
+  flex-grow: 1;
+  background-color: #d8f1a0;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.spotslist {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f3c178;
+  width: 100%;
+  flex-grow: 1;
+  align-content: flex-start;
+}
+
+.spot {
+  background-color: white;
+  height: 150px;
+  width: 350px;
+  border: solid 0.5px;
+  margin: 15px;
+  flex-grow: 1;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -30,4 +94,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
