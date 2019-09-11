@@ -3,8 +3,14 @@ import Spot from "./Spot";
 
 function FilterList() {
   return (
-    <div>
-      Spotslist <Spot />
+    <div className="spotslist">
+      <Spot />
+      <Spot />
+      <Spot />
+      <Spot />
+      <Spot />
+      <Spot />
+      <Spot />
     </div>
   );
 }

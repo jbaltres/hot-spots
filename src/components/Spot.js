@@ -1,7 +1,7 @@
 import React from "react";
 
 function Spot() {
-  return <div>Spot</div>;
+  return <div className="spot"></div>;
 }
 
 export default Spot;
