@@ -13,9 +13,10 @@ export const filter = [
   },
   {
     description: "Bewertung",
-    option1: "schlecht",
-    option2: "mittel",
-    option3: "gut",
-    option4: "marvellous"
+    option1: "⭐️",
+    option2: "⭐️⭐️",
+    option3: "⭐️⭐️⭐️",
+    option4: "⭐️⭐️⭐️⭐️",
+    option5: "⭐️⭐️⭐️⭐️⭐️"
   }
 ];

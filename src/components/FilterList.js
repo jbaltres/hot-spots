@@ -6,7 +6,7 @@ function FilterList() {
   return (
     <section className="filterlist">
       {filter.map(filter => {
-        return <Filter key={filter.title} filter={filter} />;
+        return <Filter key={filter.description} filter={filter} />;
       })}
     </section>
   );
