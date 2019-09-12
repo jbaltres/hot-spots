@@ -11,6 +11,7 @@ function FilterList() {
       <Spot />
       <Spot />
       <Spot />
+      <Spot />
     </div>
   );
 }

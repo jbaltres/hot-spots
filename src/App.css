@@ -54,12 +54,25 @@
 }
 
 .spot {
+  display: flex;
   background-color: white;
-  height: 150px;
+
   width: 350px;
   border: solid 0.5px;
   margin: 15px;
   flex-grow: 1;
+  border-radius: 10px;
+  justify-content: flex-start;
+}
+
+.spot__img {
+  margin: 10px;
+  height: 130px;
+  width: 140px;
+}
+
+.spot__content {
+  text-align: start;
 }
 
 /* .App {
