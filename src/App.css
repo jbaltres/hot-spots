@@ -56,11 +56,10 @@
 .spot {
   display: flex;
   background-color: white;
-
   width: 350px;
   border: solid 0.5px;
   margin: 15px;
-  flex-grow: 1;
+  flex: 1 0 30%;
   border-radius: 10px;
   justify-content: flex-start;
 }

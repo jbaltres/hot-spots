@@ -1,17 +1,13 @@
 import React from "react";
 import Spot from "./Spot";
+import { spot } from "../api/SpotArray";
 
 function FilterList() {
   return (
     <div className="spotslist">
-      <Spot />
-      <Spot />
-      <Spot />
-      <Spot />
-      <Spot />
-      <Spot />
-      <Spot />
-      <Spot />
+      {spot.map(spot => {
+        return <Spot key={spot.title} spot={spot} />;
+      })}
     </div>
   );
 }
