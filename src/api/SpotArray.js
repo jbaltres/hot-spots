@@ -7,7 +7,7 @@ export const spot = [
     title: "Spot",
     categories: ["museum"],
     distance: 1,
-    rating: 3.5,
+    rating: "⭐️⭐️⭐️⭐️",
     description: "First comment"
   },
   {
@@ -16,7 +16,7 @@ export const spot = [
     title: "Spot2",
     categories: ["church"],
     distance: 10,
-    rating: 2.1,
+    rating: "⭐️️⭐️⭐️",
     description: "Nice place"
   },
   {
@@ -25,7 +25,7 @@ export const spot = [
     title: "Schokoladenmuseum",
     categories: ["museum"],
     distance: 20,
-    rating: 4.9,
+    rating: "⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐",
     description: "Sweet like sugar"
   }
 ];

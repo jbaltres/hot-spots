@@ -1,11 +1,11 @@
 import React from "react";
 import Filter from "./Filter";
-import { filter } from "../api/FilterArray";
+import { filterArray } from "../api/FilterArray";
 
 function FilterList() {
   return (
     <section className="filterlist">
-      {filter.map(filter => {
+      {filterArray.map(filter => {
         return <Filter key={filter.description} filter={filter} />;
       })}
     </section>
