@@ -12,20 +12,20 @@ export const spot = [
   },
   {
     imgSrc:
-      "https://einfachstars.info/media/blog/20316/image-01-cologne-cathedral-aerial-25326253726-cropped.jpg",
+      "https://www.koelner-dom.de/typo3temp/_processed_/csm_Dom_a884e8dd95.jpg",
     title: "Spot2",
     categories: ["church"],
-    distance: 10,
-    rating: "⭐️️⭐️⭐️",
+    distance: 4,
+    rating: "⭐️",
     description: "Nice place"
   },
   {
     imgSrc:
-      "https://www.geckofootsteps.de/wp-content/uploads/2017/01/Besuch-im-Schokoladenmuseum-in-K%C3%B6ln-Schokobrunnen.jpg",
+      "https://www.schokoladenmuseum.de/assets/images/d/SchokobrunnenSchokoladenmuseum-46c5a4b6.jpg",
     title: "Schokoladenmuseum",
     categories: ["museum"],
     distance: 20,
-    rating: "⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐",
+    rating: "⭐️⭐️⭐️",
     description: "Sweet like sugar"
   }
 ];

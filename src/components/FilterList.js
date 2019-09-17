@@ -5,7 +5,7 @@ import { filterArray } from "../api/FilterArray";
 function FilterList(props) {
   return (
     <section className="filterlist">
-      {filter.map(filter => {
+      {filterArray.map(filter => {
         return (
           <Filter
             key={filter.description}
@@ -13,10 +13,6 @@ function FilterList(props) {
             onChange={props.onFilterChange}
           />
         );
-
-      {filterArray.map(filter => {
-        return <Filter key={filter.description} filter={filter} />;
-
       })}
     </section>
   );
