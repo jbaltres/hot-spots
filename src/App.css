@@ -74,6 +74,32 @@
   text-align: start;
 }
 
+.spot__category {
+  background-color: #f3c178;
+  color: white;
+  border-radius: 20px;
+  padding-left: 6px;
+  padding-right: 6px;
+  width: fit-content;
+  margin-right: 6px;
+}
+
+.spot__distance {
+  background-color: #00a878;
+  color: white;
+  border-radius: 20px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-right: 6px;
+  width: fit-content;
+}
+
+.spot__rating {
+  background-color: blue;
+  border-radius: 20px;
+  padding: 3px 6px 3px 6px;
+  width: fit-content;
+}
 /* .App {
   text-align: center;
 }

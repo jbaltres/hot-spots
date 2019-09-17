@@ -10,11 +10,11 @@ function Spot(props) {
       />
       <div className="spot__content">
         <h3>{props.spot.title}</h3>
-        <div>{props.spot.categories[0]}</div>
+        <span className="spot__category"> {props.spot.categories[0]}</span>
 
-        <span>{props.spot.distance}</span>
-        <br />
-        <span>{props.spot.rating}</span>
+        <span className="spot__distance">{props.spot.distance} min</span>
+
+        <span className="spot__rating">{props.spot.rating}</span>
         <details>
           {props.spot.description}
           <summary>

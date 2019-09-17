@@ -1,6 +1,6 @@
 import React from "react";
 import Filter from "./Filter";
-import { filter } from "../api/FilterArray";
+import { filterArray } from "../api/FilterArray";
 
 function FilterList(props) {
   return (
@@ -13,6 +13,10 @@ function FilterList(props) {
             onChange={props.onFilterChange}
           />
         );
+
+      {filterArray.map(filter => {
+        return <Filter key={filter.description} filter={filter} />;
+
       })}
     </section>
   );
