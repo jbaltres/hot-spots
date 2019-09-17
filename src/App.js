@@ -5,11 +5,14 @@ import FilterList from "./components/FilterList";
 import SpotsList from "./components/SpotsList";
 
 function App() {
+  function handleFilterChange(category, filter) {
+    console.log(category, filter);
+  }
   return (
     <div className="App">
       <Header />
       <main className="main">
-        <FilterList />
+        <FilterList onFilterChange={handleFilterChange} />
         <SpotsList />
       </main>
     </div>
