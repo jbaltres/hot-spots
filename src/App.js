@@ -5,15 +5,19 @@ import FilterList from "./components/FilterList";
 import SpotsList from "./components/SpotsList";
 
 function App() {
-  function handleFilterChange(category, filter) {
-    console.log(category, filter);
+  const [filters, setFilters] = React.useState({});
+  function handleFilterChange(name, value) {
+    // create a new Object
+    const newFilters = { ...filters };
+    newFilters[name] = value;
+    setFilters(newFilters);
   }
   return (
     <div className="App">
       <Header />
       <main className="main">
         <FilterList onFilterChange={handleFilterChange} />
-        <SpotsList />
+        <SpotsList selectedFilter={filters} test="6" />
       </main>
     </div>
   );
