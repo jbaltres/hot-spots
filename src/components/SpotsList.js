@@ -5,40 +5,61 @@ import { spot } from "../api/SpotArray";
 function SpotsList({ selectedFilter }) {
   console.log(selectedFilter);
   const filteredSpots = spot.filter(spotbla => {
-    if (!selectedFilter) {
-      return true;
+    if (selectedFilter.Kategorie) {
+      if (!spotbla.categories.includes(selectedFilter.Kategorie)) {
+        return false;
+      }
     }
-    if (selectedFilter.name === "Kategorie") {
-      return spotbla.categories.includes(selectedFilter.value);
-    }
-    if (selectedFilter.name === "Distanz") {
-      switch (selectedFilter.value) {
+
+    if (selectedFilter.Distanz) {
+      switch (selectedFilter.Distanz) {
         case "<2 min":
-          return spotbla.distance < 2;
+          if (spotbla.distance >= 2) {
+            return false;
+          }
+          break;
         case "<5 min":
-          return spotbla.distance < 5;
+          if (spotbla.distance >= 5) {
+            return false;
+          }
+          break;
 
         default:
           break;
       }
     }
-    if (selectedFilter.name === "Bewertung") {
-      switch (selectedFilter.value) {
-        case "⭐️":
-          return spotbla.rating === "⭐️";
-        case "⭐️⭐️":
-          return spotbla.rating === "⭐️⭐️";
-        case "⭐️⭐️⭐️":
-          return spotbla.rating === "⭐️⭐️⭐️";
-        case "⭐️⭐️⭐️⭐️":
-          return spotbla.rating === "⭐️⭐️⭐️⭐️";
-        case "⭐️⭐️⭐️⭐️⭐️⭐️⭐️":
-          return spotbla.rating === "⭐️⭐️⭐️⭐️⭐️⭐️⭐️";
 
-        default:
-          break;
-      }
+    switch (selectedFilter.Bewertung) {
+      case "⭐️":
+        if (spotbla.rating !== "⭐️") {
+          return false;
+        }
+        break;
+      case "⭐️⭐️":
+        if (spotbla.rating !== "⭐️⭐️") {
+          return false;
+        }
+        break;
+      case "⭐️⭐️⭐️":
+        if (spotbla.rating !== "⭐️⭐️⭐️") {
+          return false;
+        }
+        break;
+      case "⭐️⭐️⭐️⭐️":
+        if (spotbla.rating !== "⭐️⭐️⭐️⭐️") {
+          return false;
+        }
+        break;
+      case "⭐️⭐️⭐️⭐️⭐️⭐️⭐️":
+        if (spotbla.rating !== "⭐️⭐️⭐️⭐️⭐️⭐️⭐️") {
+          return false;
+        }
+        break;
+
+      default:
+        break;
     }
+
     return true;
   });
   return (

@@ -8,7 +8,7 @@ function Filter(props) {
           props.onChange(props.filter.description, event.target.value);
         }}
       >
-        <option>{props.filter.description}</option>
+        <option value=""> {props.filter.description}</option>
         {props.filter.options.map(data => {
           return <option key={data}>{data}</option>;
         })}

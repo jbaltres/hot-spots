@@ -25,7 +25,7 @@ export const spot = [
     title: "Schokoladenmuseum",
     categories: ["museum"],
     distance: 20,
-    rating: "⭐️⭐️⭐️",
+    rating: "⭐️",
     description: "Sweet like sugar"
   }
 ];
