@@ -11,6 +11,7 @@ function FilterList(props) {
             key={filter.description}
             filter={filter}
             onChange={props.onFilterChange}
+            selectedValue={props.selectedFilters[filter.name]}
           />
         );
       })}
