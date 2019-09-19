@@ -5,100 +5,44 @@
 }
 
 .App {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   margin: 0;
   text-align: center;
-  height: 100vh;
+  height: 100vh; */
 }
 
 .header {
-  background-color: #00a878;
-  height: 50px;
-  width: 100%;
 }
 
 .main {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
 }
 
 .filterlist {
-  display: flex;
-  width: 100%;
-  background-color: #d8f1a0;
-  align-items: center;
-  justify-content: space-around;
-  border: solid 1px;
-  flex-grow: 0;
 }
 
 .filter {
-  flex-grow: 1;
-  background-color: #d8f1a0;
-  height: 100px;
-  width: 100px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .spotslist {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #f3c178;
-  width: 100%;
-  flex-grow: 1;
-  align-content: flex-start;
 }
 
 .spot {
-  display: flex;
-  background-color: white;
-  width: 350px;
-  border: solid 0.5px;
-  margin: 15px;
-  flex: 1 0 30%;
-  border-radius: 10px;
-  justify-content: flex-start;
 }
 
 .spot__img {
-  margin: 10px;
-  height: 130px;
-  width: 140px;
 }
 
 .spot__content {
-  text-align: start;
 }
 
 .spot__category {
-  background-color: #f3c178;
-  color: white;
-  border-radius: 20px;
-  padding-left: 6px;
-  padding-right: 6px;
-  width: fit-content;
-  margin-right: 6px;
 }
 
 .spot__distance {
-  background-color: #00a878;
-  color: white;
-  border-radius: 20px;
-  padding-left: 6px;
-  padding-right: 6px;
-  margin-right: 6px;
-  width: fit-content;
 }
 
 .spot__rating {
-  background-color: blue;
-  border-radius: 20px;
-  padding: 3px 6px 3px 6px;
-  width: fit-content;
 }
 /* .App {
   text-align: center;

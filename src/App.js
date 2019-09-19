@@ -3,6 +3,21 @@ import "./App.css";
 import Header from "./components/Header";
 import FilterList from "./components/FilterList";
 import SpotsList from "./components/SpotsList";
+import styled from "styled-components";
+
+const MainStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  text-align: center;
+  height: 100vh;
+`;
+
+const MainBody = styled.main`
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+`;
 
 function App() {
   const [filters, setFilters] = React.useState({
@@ -15,16 +30,16 @@ function App() {
     setFilters(newFilters);
   }
   return (
-    <div className="App">
+    <MainStyle>
       <Header />
-      <main className="main">
+      <MainBody>
         <FilterList
           selectedFilters={filters}
           onFilterChange={handleFilterChange}
         />
         <SpotsList selectedFilter={filters} test="6" />
-      </main>
-    </div>
+      </MainBody>
+    </MainStyle>
   );
 }
 

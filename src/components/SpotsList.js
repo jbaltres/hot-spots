@@ -1,6 +1,16 @@
 import React from "react";
 import Spot from "./Spot";
 import { spot } from "../api/SpotArray";
+import styled from "styled-components";
+
+const SpotsListStyle = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f3c178;
+  width: 100%;
+  flex-grow: 1;
+  align-content: flex-start;
+`;
 
 function SpotsList({ selectedFilter }) {
   console.log(selectedFilter);
@@ -63,11 +73,11 @@ function SpotsList({ selectedFilter }) {
     return true;
   });
   return (
-    <div className="spotslist">
+    <SpotsListStyle>
       {filteredSpots.map(spot => {
         return <Spot key={spot.title} spot={spot} />;
       })}
-    </div>
+    </SpotsListStyle>
   );
 }
 
