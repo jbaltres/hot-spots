@@ -13,7 +13,7 @@ export const spot = [
   {
     imgSrc:
       "https://www.koelner-dom.de/typo3temp/_processed_/csm_Dom_a884e8dd95.jpg",
-    title: "Spot2",
+    title: "De kölsche Dom",
     categories: ["church"],
     distance: 4,
     rating: "⭐️",

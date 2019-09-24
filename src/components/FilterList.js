@@ -1,20 +1,33 @@
 import React from "react";
 import Filter from "./Filter";
 import { filterArray } from "../api/FilterArray";
+import styled from "styled-components";
 
-function FilterList(props) {
+const FilterListStyle = styled.section`
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: #d8f1a0;
+  align-items: center;
+  justify-content: space-around;
+  border: solid 1px;
+  flex-grow: 0;
+`;
+
+function FilterList({ selectedFilters, onFilterChange }) {
   return (
-    <section className="filterlist">
+    <FilterListStyle>
       {filterArray.map(filter => {
         return (
           <Filter
             key={filter.description}
             filter={filter}
-            onChange={props.onFilterChange}
+            onChange={onFilterChange}
+            selectedValue={selectedFilters[filter.description]}
           />
         );
       })}
-    </section>
+    </FilterListStyle>
   );
 }
 
