@@ -1,45 +1,33 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Header";
-import FilterList from "./components/FilterList";
-import SpotsList from "./components/SpotsList";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import New from "./pages/New";
+import defaultTheme from "./themes/default";
+import rudundwiß from "./themes/rudundwiß";
+import dark from "./themes/dark";
 
 const MainStyle = styled.div`
   display: flex;
+  color: ${props => props.theme.main};
   flex-direction: column;
   margin: 0;
   text-align: center;
   height: 100vh;
-`;
-
-const MainBody = styled.main`
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
+  background: ${props => props.theme.background};
 `;
 
 function App() {
-  const [filters, setFilters] = React.useState({
-    Kategorie: "museum"
-  });
-  function handleFilterChange(name, value) {
-    // create a new Object
-    const newFilters = { ...filters };
-    newFilters[name] = value;
-    setFilters(newFilters);
-  }
   return (
-    <MainStyle>
-      <Header />
-      <MainBody>
-        <FilterList
-          selectedFilters={filters}
-          onFilterChange={handleFilterChange}
-        />
-        <SpotsList selectedFilter={filters} test="6" />
-      </MainBody>
-    </MainStyle>
+    <ThemeProvider theme={defaultTheme}>
+      <MainStyle>
+        <Router>
+          <Route path="/" exact component={Home} />
+          <Route path="/new/" component={New} />
+        </Router>
+      </MainStyle>
+    </ThemeProvider>
   );
 }
 
