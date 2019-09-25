@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const FilterStyle = styled.div`
   flex-grow: 1;
-  background-color: #d8f1a0;
+  background-color: #f3c178;
   height: 100px;
   width: 100px;
   display: flex;
@@ -13,7 +13,7 @@ const FilterStyle = styled.div`
 
 const Dropdown = styled.select`
   border: ${props => (props.value ? "purple solid 8px" : "green solid 3px")};
-  color: ${props => (props.value ? "red" : "inherit")};
+  color: ${props => (props.value ? "blue" : "inherit")};
   background-color: ${props => props.backgroundColor};
 `;
 function Filter(props) {
@@ -25,7 +25,7 @@ function Filter(props) {
           props.onChange(props.filter.description, event.target.value);
         }}
         value={props.selectedValue}
-        backgroundColor="red"
+        backgroundColor="white"
       >
         <option value=""> Select: {props.filter.description}</option>
         {props.filter.options.map(data => {

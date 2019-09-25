@@ -51,7 +51,7 @@ const SpotRating = styled.span`
 
 function Spot({ spot }) {
   return (
-    <SpotStyle backgroundColor="yellow">
+    <SpotStyle backgroundColor="#CCC">
       <Spotimg src={spot.imgSrc} alt={spot.title} />
       <SpotContent>
         <h3>{spot.title}</h3>

@@ -2,16 +2,13 @@ import React from "react";
 import Filter from "./Filter";
 import { filterArray } from "../api/FilterArray";
 import styled from "styled-components";
+import rudundwiß from "../themes/rudundwiß";
 
 const FilterListStyle = styled.section`
   display: flex;
-  width: 100%;
-  height: 100px;
-  background-color: #d8f1a0;
-  align-items: center;
-  justify-content: space-around;
-  border: solid 1px;
   flex-grow: 0;
+  color: ${props => props.theme.main};
+  background: ${props => props.theme.background};
 `;
 
 function FilterList({ selectedFilters, onFilterChange }) {

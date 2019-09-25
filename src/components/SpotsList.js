@@ -6,7 +6,6 @@ import styled from "styled-components";
 const SpotsListStyle = styled.div`
   display: flex;
   flex-wrap: wrap;
-  background-color: #f3c178;
   width: 100%;
   flex-grow: 1;
   align-content: flex-start;
@@ -72,6 +71,7 @@ function SpotsList({ selectedFilter }) {
 
     return true;
   });
+
   return (
     <SpotsListStyle>
       {filteredSpots.map(spot => {

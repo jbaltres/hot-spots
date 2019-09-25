@@ -2,21 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 const Title = styled.header`
-  background-color: #00a878;
-  height: 60px;
+  background-color: ${props => props.theme.background};
+  height: 70px;
   width: 100%;
-`;
-
-const AnnoyingBox = styled.div`
-  width: 100px;
-  height: 20px;
-  background: papayawhip;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 `;
 
 function Header() {
   return (
     <Title>
-      <h2>Header</h2>
+      <h1>Hot-Spots</h1>
     </Title>
   );
 }
