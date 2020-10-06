@@ -23,7 +23,7 @@ const SpotContent = styled.div`
 `;
 
 const SpotCategory = styled.span`
-  background-color: #f3c178;
+  background-color: red;
   color: white;
   border-radius: 20px;
   padding-left: 6px;
@@ -43,25 +43,26 @@ const SpotDistance = styled.span`
 `;
 
 const SpotRating = styled.span`
+  color: white;
   background-color: blue;
   border-radius: 20px;
   padding: 3px 6px 3px 6px;
   width: fit-content;
 `;
 
-function Spot({ spot }) {
+function Spot({ drink }) {
   return (
     <SpotStyle backgroundColor="#CCC">
-      <Spotimg src={spot.imgSrc} alt={spot.title} />
+      <Spotimg src={drink.imgSrc} alt={drink.title} />
       <SpotContent>
-        <h3>{spot.title}</h3>
-        <SpotCategory> {spot.categories[0]}</SpotCategory>
+        <h3>{drink.title}</h3>
+        <SpotCategory> {drink.country}</SpotCategory>
 
-        <SpotDistance>{spot.distance} min</SpotDistance>
+        <SpotDistance>{drink.price} €</SpotDistance>
 
-        <SpotRating>{spot.rating}</SpotRating>
+        <SpotRating>{drink.taste}</SpotRating>
         <details>
-          {spot.description}
+          {drink.description}
           <summary>
             Super Beschreibungstext
             <span role="img" alt="Affe">

@@ -7,19 +7,18 @@ import styled from "styled-components";
 export default function Home({ history, location }) {
   const params = new URLSearchParams(location.search);
   const [filters, setFilters] = React.useState({
-    Kategorie: params.get("Kategorie") || "",
-    Distanz: params.get("Distanz") || "",
-    Bewertung: params.get("Bewertung") || ""
+    Land: params.get("Land") || "",
+    Preis: params.get("Preis") || "",
+    Geschmack: params.get("Geschmack") || ""
   });
   function handleFilterChange(name, value) {
     // create a new Object
-    debugger;
     const newFilters = { ...filters };
     newFilters[name] = value;
 
     setFilters(newFilters);
     history.push(
-      `/?Kategorie=${newFilters.Kategorie}&?Distanz=${newFilters.Distanz}&?Bewertung=${newFilters.Bewertung}`
+      `/?Land=${newFilters.Land}&?Preis=${newFilters.Preis}&?Geschmack=${newFilters.Geschmack}`
     );
   }
 

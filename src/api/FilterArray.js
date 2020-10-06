@@ -1,21 +1,20 @@
 export const filterArray = [
   {
-    description: "Distanz",
-    options: ["<2 min", "<5 min"]
+    description: "Land",
+    options: ["deutschland", "schweiz", "portugal", "spanien"]
   },
   {
-    description: "Kategorie",
-    options: ["museum", "church"]
+    description: "Preis",
+    options: ["0€-10€", "10€-15€", "15€-20€","20€-30€", "30€-50€", "50€-100€",">100€"]
   },
 
   {
-    description: "Bewertung",
+    description: "Geschmack",
     options: [
-      "⭐️",
-      "⭐️⭐️",
-      "⭐️⭐️⭐️",
-      "⭐️⭐️⭐️⭐️",
-      "⭐️⭐️⭐️⭐️⭐️⭐️⭐️"
+      "süß",
+      "fruchtig",
+      "normal",
+      "kräftig"
     ]
   }
 ];
