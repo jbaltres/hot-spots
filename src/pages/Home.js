@@ -3,6 +3,7 @@ import FilterList from "../components/FilterList";
 import SpotsList from "../components/SpotsList";
 import Header from "../components/Header";
 import styled from "styled-components";
+import SecondFilter from "../components/FilterInFilter";
 
 export default function Home({ history, location }) {
   const params = new URLSearchParams(location.search);
@@ -11,6 +12,7 @@ export default function Home({ history, location }) {
     Preis: params.get("Preis") || "",
     Geschmack: params.get("Geschmack") || ""
   });
+  
   function handleFilterChange(name, value) {
     // create a new Object
     const newFilters = { ...filters };
@@ -37,6 +39,7 @@ export default function Home({ history, location }) {
           onFilterChange={handleFilterChange}
         />
         <SpotsList selectedFilter={filters} test="6" />
+        <SecondFilter/>
       </MainBody>
     </>
   );

@@ -21,13 +21,13 @@ console.log(gin.price)
             return false;
           }
           break;
-        case "10€-45€":
-          if (11 > gin.price || gin.price > 20) {
+        case "10€-15€":
+          if (11 > gin.price || gin.price > 15) {
             return false;
           }
           break;
         case "15€-20€":
-          if ( 165> gin.price || gin.price > 20) {
+          if (15 > gin.price || gin.price > 20) {
             return false;
             }
           break;
@@ -37,7 +37,7 @@ console.log(gin.price)
             }
            break;
         case "30€-50€":
-            if ( 31 > gin.price || gin.price > 50) {
+            if (31 > gin.price || gin.price > 50) {
               return false;
               }
             break;

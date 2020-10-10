@@ -50,8 +50,21 @@ const SpotRating = styled.span`
   width: fit-content;
 `;
 
+const Auswahl = styled.button`
+width: 70px;
+height: 40px;
+background-color: green;
+color: white;
+`;
+
 function Spot({ drink }) {
-  return (
+
+  const [hallo, sethallo] = React.useState("");
+  
+  const gefiltertesHallo = hallo >= drink.title? drink.title : "sehr leer" 
+console.log(gefiltertesHallo)
+  
+return (
     <SpotStyle backgroundColor="#CCC">
       <Spotimg src={drink.imgSrc} alt={drink.title} />
       <SpotContent>
@@ -70,6 +83,7 @@ function Spot({ drink }) {
             </span>
           </summary>
         </details>
+        <Auswahl onClick={() => sethallo(hallo + drink.title)}>Click me!</Auswahl> {gefiltertesHallo}
       </SpotContent>
     </SpotStyle>
   );
