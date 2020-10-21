@@ -14,7 +14,6 @@ const MainStyle = styled.div`
   flex-direction: column;
   margin: 0;
   text-align: center;
-  height: 100vh;
   background: ${props => props.theme.background};
 `;
 

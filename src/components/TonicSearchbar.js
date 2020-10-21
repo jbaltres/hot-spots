@@ -6,8 +6,9 @@ import NeuesTonic from "./NeuesTonic";
 const StyledDiv = styled.div`
 
 margin:15px 10px;
-border: solid;
-background-color: papayawhip`;
+border: 1px solid;
+display: flex;
+justify-content: center`;
 
 
 
@@ -24,6 +25,7 @@ for (let i = 0; i < tonicwaters.length; i++) {
 
 return (
     <>
+    <p>Dazu passende Tonic Water:</p>
     <StyledDiv>
         {filteredTonics.map(result => {
           return <NeuesTonic key={result.title} ntonic={result}/>

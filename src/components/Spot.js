@@ -1,8 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import New from "../pages/New";
+import TonicSearchbar from "./TonicSearchbar";
+import ZutatenSearchbar from "./ZutatenFilter";
 
 const SpotStyle = styled.header`
   display: flex;
+  flex-direction: column;
   background-color: ${props => props.backgroundColor};
   width: 350px;
   border: solid 0.5px;
@@ -57,34 +61,60 @@ background-color: green;
 color: white;
 `;
 
+const BadgeContainer = styled.div`
+margin: 10px 0px`;
+
+const Container1 = styled.span`
+
+`;
+
+const Container2 = styled.div`
+
+`;
+
 function Spot({ drink }) {
 
   const [hallo, sethallo] = React.useState("");
   
   const gefiltertesHallo = hallo >= drink.title? drink.title : "sehr leer" 
 console.log(gefiltertesHallo)
+  if (gefiltertesHallo === "sehr leer"){
+    return (
+      <SpotStyle backgroundColor="#CCC" onClick={() => sethallo(hallo + drink.title)}>
+        <Container1>
+        <Spotimg src={drink.imgSrc} alt={drink.title} />
+        
+          <h3>{drink.title}</h3>
+          <BadgeContainer>
+          <SpotCategory> {drink.country}</SpotCategory>
   
+          <SpotDistance>{drink.price} €</SpotDistance>
+  
+          <SpotRating>{drink.taste}</SpotRating>
+          </BadgeContainer>
+          </Container1>
+        
+      </SpotStyle>
+    );
+  }
 return (
-    <SpotStyle backgroundColor="#CCC">
+    <SpotStyle backgroundColor="#CCC" onClick={() => sethallo(hallo + drink.title)}>
+      <Container1>
       <Spotimg src={drink.imgSrc} alt={drink.title} />
-      <SpotContent>
+      
         <h3>{drink.title}</h3>
         <SpotCategory> {drink.country}</SpotCategory>
 
         <SpotDistance>{drink.price} €</SpotDistance>
 
         <SpotRating>{drink.taste}</SpotRating>
-        <details>
-          {drink.description}
-          <summary>
-            Super Beschreibungstext
-            <span role="img" alt="Affe">
-              🦉
-            </span>
-          </summary>
-        </details>
-        <Auswahl onClick={() => sethallo(hallo + drink.title)}>Click me!</Auswahl> {gefiltertesHallo}
-      </SpotContent>
+        
+        </Container1>
+        <Container2>
+        <TonicSearchbar fS={gefiltertesHallo}/>
+        <ZutatenSearchbar fS={gefiltertesHallo}/>
+        </Container2>
+      
     </SpotStyle>
   );
 }

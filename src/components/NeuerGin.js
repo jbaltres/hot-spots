@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { gins, tonicwaters } from "../api/SpotArray";
 import TonicSearchbar from "./TonicSearchbar";
+import ZutatenSearchbar from "./ZutatenFilter";
 
 const StyledDiv = styled.div`
 
@@ -24,10 +25,12 @@ function  NeuerGin({ndrink}){
     console.log(gefiltertesHallo)
     return(
 <>
+
 <StyledDiv key={ndrink.title}>{ndrink.title}<p>{ndrink.price}</p>{ndrink.country}
         <Auswahl onClick={() => sethallo(hallo + ndrink.title)}>Click me!</Auswahl> {gefiltertesHallo}
-        </StyledDiv>
         <TonicSearchbar fS={gefiltertesHallo}/>
+        <ZutatenSearchbar fS={gefiltertesHallo}/>
+</StyledDiv>        
         </>
     );
 }

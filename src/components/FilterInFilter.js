@@ -20,8 +20,8 @@ const SpotsListStyle = styled.div`
 function SecondFilter(){
 
 
-    const results = gins.filter(gin => gin.price > 10);
-  
+    const results = gins.filter(gin => gin.price > 30);
+  console.log(results)
 
 return (
   <>

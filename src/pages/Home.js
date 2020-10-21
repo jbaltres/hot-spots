@@ -30,6 +30,17 @@ export default function Home({ history, location }) {
     flex-direction: column;
   `;
 
+  const BodyDescription = styled.div`
+  background-color: ${props => props.theme.background};
+  width: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    margin: 20px 0px;
+    font-size: 1.2em;
+    font-weight: bold; 
+    font-style: italic;
+  `;
+
   return (
     <>
       <Header />
@@ -38,8 +49,8 @@ export default function Home({ history, location }) {
           selectedFilters={filters}
           onFilterChange={handleFilterChange}
         />
+      <BodyDescription>Klicke aud den Gin deiner Wahl</BodyDescription>  
         <SpotsList selectedFilter={filters} test="6" />
-        <SecondFilter/>
       </MainBody>
     </>
   );
