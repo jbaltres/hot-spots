@@ -80,7 +80,7 @@ function Spot({ drink }) {
 console.log(gefiltertesHallo)
   if (gefiltertesHallo === "sehr leer"){
     return (
-      <SpotStyle backgroundColor="#CCC" onClick={() => sethallo(hallo + drink.title)}>
+      <SpotStyle backgroundColor="rgba(0,0,0,0.7)" onClick={() => sethallo(hallo + drink.title)}>
         <Container1>
         <Spotimg src={drink.imgSrc} alt={drink.title} />
         
@@ -98,7 +98,7 @@ console.log(gefiltertesHallo)
     );
   }
 return (
-    <SpotStyle backgroundColor="#CCC" onClick={() => sethallo(hallo + drink.title)}>
+    <SpotStyle backgroundColor="rgba(0,0,0,0.7)" onClick={() => sethallo(hallo + drink.title)}>
       <Container1>
       <Spotimg src={drink.imgSrc} alt={drink.title} />
       

@@ -3,17 +3,18 @@ import styled from "styled-components";
 
 const FilterStyle = styled.div`
   flex-grow: 1;
-  background-color: #f3c178;
+  background-color: rgba(0,0,0,0.7);
   height: 100px;
   width: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: black;
 `;
 
 const Dropdown = styled.select`
   border: ${props => (props.value ? "purple solid 8px" : "green solid 3px")};
-  color: ${props => (props.value ? "blue" : "inherit")};
+  color: ${props => (props.value ? "blue" : "black")};
   background-color: ${props => props.backgroundColor};
 `;
 function Filter(props) {
