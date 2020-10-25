@@ -4,15 +4,35 @@ import SpotsList from "../components/SpotsList";
 import Header from "../components/Header";
 import styled from "styled-components";
 import SecondFilter from "../components/FilterInFilter";
+import Checkbox from "../components/Checkbox";
 
 export default function Home({ history, location }) {
   const params = new URLSearchParams(location.search);
   const [filters, setFilters] = React.useState({
     Land: params.get("Land") || "",
     Preis: params.get("Preis") || "",
-    Geschmack: params.get("Geschmack") || ""
+    GKategorie: params.get("GKategorie") || "",
   });
   
+  console.log(filters)
+
+const [checkedkräftig,setCheckedkräftig] = React.useState(false);
+const [checkedfruchtig,setCheckedfruchtig] = React.useState(false);
+const [checkedsüß,setCheckedsüß] = React.useState(false);
+
+
+const inputfieldvalueKräftig = checkedkräftig ? "kräftig" : "";
+const inputfieldvalueFruchtig = checkedfruchtig ? "fruchtig" : "";
+const inputfieldvalueSüß = checkedsüß ? "süß" : "";
+
+const geschmackObject = {Geschmack1:inputfieldvalueKräftig, Geschmack2:inputfieldvalueFruchtig, Geschmack3:inputfieldvalueSüß}
+
+console.log(geschmackObject)
+
+const geschmacksArrayString = JSON.stringify(geschmackObject.Geschmack1+ geschmackObject.Geschmack2+ geschmackObject.Geschmack3)
+
+console.log("Dies ist der String:"+geschmacksArrayString)
+
   function handleFilterChange(name, value) {
     // create a new Object
     const newFilters = { ...filters };
@@ -20,7 +40,8 @@ export default function Home({ history, location }) {
 
     setFilters(newFilters);
     history.push(
-      `/?Land=${newFilters.Land}&?Preis=${newFilters.Preis}&?Geschmack=${newFilters.Geschmack}`
+      `/?Land=${newFilters.Land}&?Preis=${newFilters.Preis}&?GKategorie=${newFilters.GKategorie}
+`
     );
   }
 
@@ -49,8 +70,15 @@ export default function Home({ history, location }) {
           selectedFilters={filters}
           onFilterChange={handleFilterChange}
         />
+
+      Kräftig  
+      <Checkbox checked={checkedkräftig} setChecked={setCheckedkräftig} inputfieldvalue={inputfieldvalueKräftig} />
+      Fruchtig
+      <Checkbox checked={checkedfruchtig} setChecked={setCheckedfruchtig} inputfieldvalue={inputfieldvalueFruchtig}  />
+      Süß
+      <Checkbox checked={checkedsüß} setChecked={setCheckedsüß} inputfieldvalue={inputfieldvalueSüß} />
       <BodyDescription>Klicke aud den Gin deiner Wahl</BodyDescription>  
-        <SpotsList selectedFilter={filters} test="6" />
+        <SpotsList selectedFilter={filters} tasteObject={geschmackObject} />
       </MainBody>
     </>
   );

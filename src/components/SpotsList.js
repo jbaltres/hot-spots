@@ -11,10 +11,10 @@ const SpotsListStyle = styled.div`
   align-content: flex-start;
 `;
 
-function SpotsList({ selectedFilter }) {
+function SpotsList({ selectedFilter, tasteObject }) {
   console.log(selectedFilter);
   const filteredSpots = gins.filter(gin => {
-console.log(gin.price)
+    console.log(gin.taste[0])
       switch (selectedFilter.Preis) {
         case "0€-10€":
           if (gin.price >= 10) {
@@ -55,33 +55,52 @@ console.log(gin.price)
         default:
           break;
       }
-    
 
-    switch (selectedFilter.Geschmack) {
+console.log("Geschmack 1 ist"+tasteObject.Geschmack1)   
+
+
+  /*    if (tasteObject.Geschmack1 !== "kräftig") {
+          return false;
+      }
+  */
+
+ switch (tasteObject.Geschmack1) {
+  case "kräftig":
+    if (gin.taste.includes("kräftig") !== true) {
+      return false;
+    }
+break;
+
+
+  default:
+    break;
+  }
+
+  switch (tasteObject.Geschmack2) {
+    case "fruchtig":
+      if (gin.taste.includes("fruchtig") !== true) {
+        return false;
+      }
+  break;
+  
+  
+    default:
+      break;
+    }
+
+    switch (tasteObject.Geschmack3) {
       case "süß":
-        if (gin.taste !== "süß") {
+        if (gin.taste.includes("süß") !== true) {
           return false;
         }
-        break;
-      case "fruchtig":
-        if (gin.taste !== "fruchtig") {
-          return false;
-        }
-        break;
-      case "kräftig":
-        if (gin.taste !== "kräftig") {
-          return false;
-        }
-        break;
-      case "normal":
-        if (gin.taste !== "normal") {
-          return false;
-        }
-        break;
-
+    break;
+    
+    
       default:
         break;
-    }
+      }
+
+    
 
     switch (selectedFilter.Land) {
       case "portugal":
