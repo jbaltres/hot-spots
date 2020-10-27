@@ -139,23 +139,116 @@ export const gins = [
 export const tonicwaters = [
   {
     imgSrc:"https://images.unsplash.com/photo-1598614187854-26a60e982dc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    title: "Rheinspirit",
+    title: "Aqua Monaco Tonic Water",
     country: "deutschland",
     price: 1,
-    taste: "normal",
-    description: "Ingwer, Koriander, Kubeben-Pfeffer, Lavendel, Wacholder, Zitronengras",
-    gin: ["Gin Mare", "Teuer Gin","Ferdinand's Saar Dry Gin Goldcap 2018 in Messingschatulle","Studer Swiss Classic Gin","Sharish Blue Magic Gin"]
+    taste: "classic",
+    gin: ["The Duke Munich Dry Gin"]
   },
   {
-    imgSrc: "https://images.unsplash.com/photo-1598614187854-26a60e982dc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    title: "Schweppes",
+    imgSrc:"https://images.unsplash.com/photo-1598614187854-26a60e982dc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    title: "Aqua Monaco Organic Tonic",
     country: "deutschland",
-    price: 29.99,
-    taste: "kräftig",
-    description: "Die Algarve in Portugal mit ihren vielen Sonnentagen, dem heißen und trockenen Sommer und der sanften Meerbrise gilt als die südlichste Region auf dem portogiesischen Festland und spielt bei dem Gin Sul eine große Rolle. Gleiches gilt auch für die Sonderedition von 2016, den Gin Sul in der Edition Rota do Sul. Die Hersteller dieses Gins waren von der Vegetation der portogiesischen Küste so begeistert, dass sie sich kurzerhand aufmachten, um in der Region nach weiteren Botanicals zu suchen, die sie für ihre Gins verwenden konnten. Die Zistrose, eine Art Strauch, wächst im heißen Klima des Mittelmeers und an der Atlantikküste Portugals. Diese Zutat findet bereits im klassischen Gin Sul Verwendung. Da verwundert es nicht, dass die Hersteller des Gins für den Rota do Sul erneut die sonnenbeschienene Region aufsuchten. Die ausgewählten Botanicals für diesen Gin spiegeln das Flair der portogiesischen Küste perfekt wider. Oregano, Thymianblüten und Rosmarin verleihen dem Rota do Sul eine kräuterige Note, während Strohblumen den Gin mit ihren floralen Aromen untermalen. Frische Zitronen, Apfelsinen und Aprikosen sorgen für eine angenehme Frische, die nicht nur im heißen Klima der Algarve äußerst willkommen ist. In der Altoaner Spirituosen Manufaktur in Hamburg wurde schließlich klares Quellwasser aus dem Monchique-Gebirge hinzugegeben, das dem Rota do Sul noch mehr Exklusivität verleiht. Der Gin ist außerdem auf nur 2.000 Flaschen limitiert.",
-    gin: ["Teuer Gin"]
+    price: 1,
+    taste: "classic",
+    gin: ["Monkey 47 Schwarzwald Gin",]
   },
-  
+  {
+    imgSrc:"https://images.unsplash.com/photo-1598614187854-26a60e982dc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    title: "Dr. Polidri Cucumber Tonic Water",
+    country: "deutschland",
+    price: 1,
+    taste: "classic",
+    gin: ["Hendricks","Ferdinand's Saar Dry Gin"]
+  },
+  {
+    imgSrc:"https://images.unsplash.com/photo-1598614187854-26a60e982dc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    title: "1724 Tonic Water",
+    country: "spanien",
+    price: 1,
+    taste: "classic",
+    gin: ["Monkey 47 Schwarzwald Gin","Gin Mare","The Duke Wanderlust Gin"]
+  },
+  {
+    imgSrc:"https://images.unsplash.com/photo-1598614187854-26a60e982dc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    title: "Schweppes Indian Tonic Water",
+    country: "deutschland",
+    price: 1,
+    taste: "classic",
+    gin: ["Tanqueray London Dry Gin","Roku Gin","Galeb Dry Gin","Ferdinand's Saar Dry Gin","The Duke Munich Dry Gin","The Duke Wanderlust Gin","The Duke Rough Gin"]
+  },
+  {
+    imgSrc:"https://images.unsplash.com/photo-1598614187854-26a60e982dc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    title: "Thomas Henry Tonic Water",
+    country: "deutschland",
+    price: 1,
+    taste: "classic",
+    gin: ["Tanqueray London Dry Gin","Windspiel Premium Dry Gin","Roku Gin","Galeb Dry Gin","Ferdinand's Saar Dry Gin","Monkey 47 Schwarzwald Gin","The Duke Rough Gin","Gin Mare","Hendricks"]
+  },
+  {
+    imgSrc:"https://images.unsplash.com/photo-1598614187854-26a60e982dc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    title: "Windspiel Tonic Water",
+    country: "deutschland",
+    price: 1,
+    taste: "classic",
+    gin: ["Windspiel Premium Dry Gin"]
+  },
+  {
+    imgSrc:"https://images.unsplash.com/photo-1598614187854-26a60e982dc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    title: "Fever-Tree Premium Indian Tonic Water",
+    country: "deutschland",
+    price: 1,
+    taste: "classic",
+    gin: ["Tanqueray London Dry Gin","Ferdinand's Saar Dry Gin","Monkey 47 Schwarzwald Gin","The Duke Wanderlust Gin","The Duke Rough Gin","Gin Mare","Hendricks","The Duke Munich Dry Gin"]
+  },
+  {
+    imgSrc:"https://images.unsplash.com/photo-1598614187854-26a60e982dc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    title: "Fever-Tree Mediteranean Tonic Water",
+    country: "deutschland",
+    price: 1,
+    taste: "classic",
+    gin: ["Galeb Dry Gin","Ferdinand's Saar Dry Gin","Gin Mare","Hendricks"]
+  },
+  {
+    imgSrc:"https://images.unsplash.com/photo-1598614187854-26a60e982dc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    title: "Indi & Co. Botanical Tonic Water",
+    country: "spanien",
+    price: 1,
+    taste: "classic",
+    gin: ["Gin Mare"]
+  },
+  {
+    imgSrc:"https://images.unsplash.com/photo-1598614187854-26a60e982dc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    title: "Goldberg Tonic Water",
+    country: "deutschland",
+    price: 1,
+    taste: "classic",
+    gin: ["Tanqueray London Dry Gin","The Duke Wanderlust Gin"]
+  },
+  {
+    imgSrc:"https://images.unsplash.com/photo-1598614187854-26a60e982dc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    title: "Weisswange Indian Tonic Water",
+    country: "deutschland",
+    price: 1,
+    taste: "classic",
+    gin: [""]
+  },
+  {
+    imgSrc:"https://images.unsplash.com/photo-1598614187854-26a60e982dc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    title: "Fentimans Premium Indian Tonic Water",
+    country: "deutschland",
+    price: 1,
+    taste: "classic",
+    gin: [""]
+  },
+  {
+    imgSrc:"https://images.unsplash.com/photo-1598614187854-26a60e982dc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    title: "Swiss Mountain Spring Classic Tonic Water",
+    country: "deutschland",
+    price: 1,
+    taste: "classic",
+    gin: [""]
+  },
   
 ];
 
@@ -163,75 +256,47 @@ export const ingredients = [
   {
     imgSrc: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     title: "Nelke",
-    country: "deutschland",
-    price: 1,
-    description: "Ingwer, Koriander, Kubeben-Pfeffer, Lavendel, Wacholder, Zitronengras",
-    gin: ["Gin Mare", "Teuer Gin","Ferdinand's Saar Dry Gin Goldcap 2018 in Messingschatulle","Studer Swiss Classic Gin","Sharish Blue Magic Gin"]
+    gin: [""]
   },
   {
     imgSrc: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     title:  "Gurke",
-    country: "portugal",
-    price: 2.70,
-    description: "Angelikawurzel, Ingwer, Kardamom, Koriandersamen, Lakritz, Wacholder, Zimt",
-    gin: ["Gin Mare", "Teuer Gin"]
+    gin: ["Tanqueray London Dry Gin","Windspiel Premium Dry Gin","The Duke Munich Dry Gin","Hendricks","Monkey 47 Schwarzwald Gin"]
   },
   {
     imgSrc: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     title: "Limette",
-    country: "deutschland",
-    price: 29.99,
-    description: "Die Algarve in Portugal mit ihren vielen Sonnentagen, dem heißen und trockenen Sommer und der sanften Meerbrise gilt als die südlichste Region auf dem portogiesischen Festland und spielt bei dem Gin Sul eine große Rolle. Gleiches gilt auch für die Sonderedition von 2016, den Gin Sul in der Edition Rota do Sul. Die Hersteller dieses Gins waren von der Vegetation der portogiesischen Küste so begeistert, dass sie sich kurzerhand aufmachten, um in der Region nach weiteren Botanicals zu suchen, die sie für ihre Gins verwenden konnten. Die Zistrose, eine Art Strauch, wächst im heißen Klima des Mittelmeers und an der Atlantikküste Portugals. Diese Zutat findet bereits im klassischen Gin Sul Verwendung. Da verwundert es nicht, dass die Hersteller des Gins für den Rota do Sul erneut die sonnenbeschienene Region aufsuchten. Die ausgewählten Botanicals für diesen Gin spiegeln das Flair der portogiesischen Küste perfekt wider. Oregano, Thymianblüten und Rosmarin verleihen dem Rota do Sul eine kräuterige Note, während Strohblumen den Gin mit ihren floralen Aromen untermalen. Frische Zitronen, Apfelsinen und Aprikosen sorgen für eine angenehme Frische, die nicht nur im heißen Klima der Algarve äußerst willkommen ist. In der Altoaner Spirituosen Manufaktur in Hamburg wurde schließlich klares Quellwasser aus dem Monchique-Gebirge hinzugegeben, das dem Rota do Sul noch mehr Exklusivität verleiht. Der Gin ist außerdem auf nur 2.000 Flaschen limitiert.",
-    gin: ["Teuer Gin","Gin Sul Edition Rota do Sul"]
+    gin: ["Tanqueray London Dry Gin","Windspiel Premium Dry Gin","Roku Gin","The Duke Rough Gin","Hendricks","Gin Mare","Monkey 47 Schwarzwald Gin"]
   },
   {
     imgSrc: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     title: "Zitrone",
-    country: "deutschland",
-    price: 0.40,
-    taste: "kräftig",
-    description: "geheime Zutaten, Riesling",
-    gin: ["Gin Sul Edition Rota do Sul"]
+    gin: ["Tanqueray London Dry Gin","Windspiel Premium Dry Gin","Roku Gin","Galeb Dry Gin","Ferdinand's Saar Dry Gin","The Duke Wanderlust Gin","The Duke Munich Dry Gin","Gin Mare"]
   },
   {
     imgSrc: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     title: "Orange",
-    country: "portugal",
-    price: 89,
-    description: "Angelikawurzel, Ingwer, Kardamom, Koriandersamen, Lakritz, Wacholder, Zimt",
-    gin: ["Teuer Gin"]
+    gin: ["Galeb Dry Gin","Ferdinand's Saar Dry Gin","The Duke Wanderlust Gin","The Duke Rough Gin","The Duke Munich Dry Gin"]
   },
   {
     imgSrc: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     title: "Apfel",
-    country: "portugal",
-    price: 89,
-    description: "Angelikawurzel, Ingwer, Kardamom, Koriandersamen, Lakritz, Wacholder, Zimt",
-    gin: ["Teuer Gin"]
+    gin: ["The Duke Wanderlust Gin","The Duke Rough Gin"]
   },
   {
     imgSrc: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     title: "Birne",
-    country: "portugal",
-    price: 89,
-    description: "Angelikawurzel, Ingwer, Kardamom, Koriandersamen, Lakritz, Wacholder, Zimt",
-    gin: ["Teuer Gin"]
+    gin: [""]
   },
   {
     imgSrc: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     title: "Grapefrut",
-    country: "portugal",
-    price: 89,
-    description: "Angelikawurzel, Ingwer, Kardamom, Koriandersamen, Lakritz, Wacholder, Zimt",
-    gin: ["Teuer Gin"]
+    gin: ["The Duke Wanderlust Gin"]
   },
   {
     imgSrc: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     title: "Ingwer",
-    country: "portugal",
-    price: 89,
-    description: "Angelikawurzel, Ingwer, Kardamom, Koriandersamen, Lakritz, Wacholder, Zimt",
-    gin: ["Teuer Gin"]
+    gin: ["Tanqueray London Dry Gin","Roku Gin"]
   }
 ];
 
