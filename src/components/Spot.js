@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import New from "../pages/New";
+import TonicSearchbar from "./TonicSearchbar";
+import ZutatenSearchbar from "./ZutatenFilter";
 
 const SpotStyle = styled.header`
   display: flex;
+  flex-direction: column;
   background-color: ${props => props.backgroundColor};
-  width: 350px;
+  max-width: 350px;
   border: solid 0.5px;
   margin: 15px;
   flex: 1 0 30%;
@@ -23,53 +27,124 @@ const SpotContent = styled.div`
 `;
 
 const SpotCategory = styled.span`
-  background-color: #f3c178;
+  background-color: rgba(172, 87, 242,0.6);
   color: white;
   border-radius: 20px;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding:6px;
   width: fit-content;
-  margin-right: 6px;
+  margin: 10px;
+`;
+
+const LinkButton = styled.a`
+  background-color: rgb(58, 189, 80);
+  color: white;
+  padding:6px;
+  width: fit-content;
+  margin: 10px;
+  display: flex;
+  text-decoration: none;
 `;
 
 const SpotDistance = styled.span`
-  background-color: #00a878;
+  background-color: rgba(52, 105, 250,0.6);
   color: white;
   border-radius: 20px;
-  padding-left: 6px;
-  padding-right: 6px;
-  margin-right: 6px;
+  padding:6px;
+  margin: 10px;
   width: fit-content;
 `;
 
 const SpotRating = styled.span`
-  background-color: blue;
+  color: white;
+  background-color: rgba(172, 87, 242,0.6);
   border-radius: 20px;
   padding: 3px 6px 3px 6px;
   width: fit-content;
+  margin: 10px
 `;
 
-function Spot({ spot }) {
-  return (
-    <SpotStyle backgroundColor="#CCC">
-      <Spotimg src={spot.imgSrc} alt={spot.title} />
-      <SpotContent>
-        <h3>{spot.title}</h3>
-        <SpotCategory> {spot.categories[0]}</SpotCategory>
+const Auswahl = styled.button`
+width: 70px;
+height: 40px;
+background-color: green;
+color: white;
+`;
 
-        <SpotDistance>{spot.distance} min</SpotDistance>
+const BadgeContainer = styled.div`
+display: flex;
+flex-direction: column;
+margin: 10px;
+`;
 
-        <SpotRating>{spot.rating}</SpotRating>
-        <details>
-          {spot.description}
-          <summary>
-            Super Beschreibungstext
-            <span role="img" alt="Affe">
-              🦉
-            </span>
-          </summary>
-        </details>
-      </SpotContent>
+const RatingWrapper = styled.div`
+display: flex;
+`;
+
+const Container1 = styled.span`
+`;
+
+const DescriptionWrapper = styled.div`
+display: flex;
+flex-direction:row;
+align-items: center
+flex-wrap:wrap
+`;
+
+const Container2 = styled.div`
+
+`;
+
+function Spot({ drink }) {
+
+  const [hallo, sethallo] = React.useState("");
+  
+  const gefiltertesHallo = hallo >= drink.title? drink.title : "sehr leer" 
+console.log(gefiltertesHallo)
+  if (gefiltertesHallo === "sehr leer"){
+    return (
+      <SpotStyle backgroundColor="rgba(0,0,0,0.85)" onClick={() => sethallo(hallo + drink.title)}>
+        <Container1>
+        <Spotimg src={drink.imgSrc} alt={drink.title} />
+        
+          <h3>{drink.title}</h3>
+          <BadgeContainer>
+          <DescriptionWrapper>Herkunft: <SpotCategory>{drink.country}</SpotCategory></DescriptionWrapper>
+          <DescriptionWrapper>Preis/l:<SpotDistance>{drink.price}€</SpotDistance></DescriptionWrapper>
+          <DescriptionWrapper>Geschmack:{drink.taste.map(drink=>{return <DescriptionWrapper> 
+            <RatingWrapper>
+              <SpotRating> {drink} </SpotRating>
+            </RatingWrapper>
+          </DescriptionWrapper>})}
+          </DescriptionWrapper>         
+          </BadgeContainer>
+          </Container1>
+        <LinkButton href={drink.link} target="_blank">Mehr Infos</LinkButton>
+      </SpotStyle>
+    );
+  }
+return (
+    <SpotStyle backgroundColor="rgba(0,0,0,0.85)" onClick={() => sethallo(hallo + drink.title)}>
+        <Container1>
+        <Spotimg src={drink.imgSrc} alt={drink.title} />
+        
+          <h3>{drink.title}</h3>
+          <BadgeContainer>
+          <DescriptionWrapper>Herkunft: <SpotCategory>{drink.country}</SpotCategory></DescriptionWrapper>
+          <DescriptionWrapper>Preis/l:<SpotDistance>{drink.price}€</SpotDistance></DescriptionWrapper>
+          <DescriptionWrapper>Geschmack:{drink.taste.map(drink=>{return <DescriptionWrapper> 
+            <RatingWrapper>
+              <SpotRating> {drink} </SpotRating>
+            </RatingWrapper>
+          </DescriptionWrapper>})}
+          </DescriptionWrapper>         
+          </BadgeContainer>
+          </Container1>
+        <LinkButton href={drink.link} target="_blank">Mehr Infos</LinkButton>
+        <Container2>
+        <TonicSearchbar fS={gefiltertesHallo}/>
+        <ZutatenSearchbar fS={gefiltertesHallo}/>
+        </Container2>
+      
     </SpotStyle>
   );
 }

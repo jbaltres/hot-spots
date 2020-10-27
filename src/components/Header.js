@@ -12,7 +12,7 @@ const Title = styled.header`
 function Header() {
   return (
     <Title>
-      <h1>Hot-Spots</h1>
+      <h1>Slot-Machine</h1>
     </Title>
   );
 }
