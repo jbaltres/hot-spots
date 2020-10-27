@@ -8,7 +8,7 @@ const SpotStyle = styled.header`
   display: flex;
   flex-direction: column;
   background-color: ${props => props.backgroundColor};
-  width: 350px;
+  max-width: 350px;
   border: solid 0.5px;
   margin: 15px;
   flex: 1 0 30%;
@@ -27,31 +27,40 @@ const SpotContent = styled.div`
 `;
 
 const SpotCategory = styled.span`
-  background-color: red;
+  background-color: rgba(172, 87, 242,0.6);
   color: white;
   border-radius: 20px;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding:6px;
   width: fit-content;
-  margin-right: 6px;
+  margin: 10px;
+`;
+
+const LinkButton = styled.a`
+  background-color: rgb(58, 189, 80);
+  color: white;
+  padding:6px;
+  width: fit-content;
+  margin: 10px;
+  display: flex;
+  text-decoration: none;
 `;
 
 const SpotDistance = styled.span`
-  background-color: #00a878;
+  background-color: rgba(52, 105, 250,0.6);
   color: white;
   border-radius: 20px;
-  padding-left: 6px;
-  padding-right: 6px;
-  margin-right: 6px;
+  padding:6px;
+  margin: 10px;
   width: fit-content;
 `;
 
 const SpotRating = styled.span`
   color: white;
-  background-color: blue;
+  background-color: rgba(172, 87, 242,0.6);
   border-radius: 20px;
   padding: 3px 6px 3px 6px;
   width: fit-content;
+  margin: 10px
 `;
 
 const Auswahl = styled.button`
@@ -62,10 +71,23 @@ color: white;
 `;
 
 const BadgeContainer = styled.div`
-margin: 10px 0px`;
+display: flex;
+flex-direction: column;
+margin: 10px;
+`;
+
+const RatingWrapper = styled.div`
+display: flex;
+`;
 
 const Container1 = styled.span`
+`;
 
+const DescriptionWrapper = styled.div`
+display: flex;
+flex-direction:row;
+align-items: center
+flex-wrap:wrap
 `;
 
 const Container2 = styled.div`
@@ -80,25 +102,28 @@ function Spot({ drink }) {
 console.log(gefiltertesHallo)
   if (gefiltertesHallo === "sehr leer"){
     return (
-      <SpotStyle backgroundColor="rgba(0,0,0,0.7)" onClick={() => sethallo(hallo + drink.title)}>
+      <SpotStyle backgroundColor="rgba(0,0,0,0.85)" onClick={() => sethallo(hallo + drink.title)}>
         <Container1>
         <Spotimg src={drink.imgSrc} alt={drink.title} />
         
           <h3>{drink.title}</h3>
           <BadgeContainer>
-          <SpotCategory> {drink.country}</SpotCategory>
-  
-          <SpotDistance>{drink.price} €</SpotDistance>
-  
-          <SpotRating>{drink.taste}</SpotRating>
+          <DescriptionWrapper>Herkunft: <SpotCategory>{drink.country}</SpotCategory></DescriptionWrapper>
+          <DescriptionWrapper>Preis/l:<SpotDistance>{drink.price}€</SpotDistance></DescriptionWrapper>
+          <DescriptionWrapper>Geschmack:{drink.taste.map(drink=>{return <DescriptionWrapper> 
+            <RatingWrapper>
+              <SpotRating> {drink} </SpotRating>
+            </RatingWrapper>
+          </DescriptionWrapper>})}
+          </DescriptionWrapper>         
           </BadgeContainer>
           </Container1>
-        
+        <LinkButton href={drink.link} target="_blank">Mehr Infos</LinkButton>
       </SpotStyle>
     );
   }
 return (
-    <SpotStyle backgroundColor="rgba(0,0,0,0.7)" onClick={() => sethallo(hallo + drink.title)}>
+    <SpotStyle backgroundColor="rgba(0,0,0,0.85)" onClick={() => sethallo(hallo + drink.title)}>
       <Container1>
       <Spotimg src={drink.imgSrc} alt={drink.title} />
       

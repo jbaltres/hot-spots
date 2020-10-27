@@ -4,6 +4,7 @@ import { filterArray } from "../api/FilterArray";
 import styled from "styled-components";
 import rudundwiß from "../themes/rudundwiß";
 
+
 const FilterListStyle = styled.section`
   display: flex;
   flex-grow: 0;
@@ -11,7 +12,16 @@ const FilterListStyle = styled.section`
   background: ${props => props.theme.background};
 `;
 
+const CheckboxWrapper = styled.div`
+display: flex;
+flex-direction: column;
+background-color: rgba(0,0,0,0.7);
+`;
+
+
 function FilterList({ selectedFilters, onFilterChange }) {
+
+
   return (
     <FilterListStyle>
       {filterArray.map(filter => {

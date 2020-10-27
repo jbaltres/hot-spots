@@ -18,13 +18,13 @@ const MainStyle = styled.div`
 `;
 
 const MainBodyStyle = styled.div`
-background-image:url(https://www.eyeforspirits.com/wp-content/upLoads/2020/01/wacholder-2.jpg);
-background-position: left;
+background-image:url(https://images.unsplash.com/photo-1453825012366-3738046cb6c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80);
+background-position: center;
+background-color: black;
 color: white;
 background-repeat: no-repeat;
 background-attachment: fixed;
 min-height: 100vh;
-min-width: 50vw;
 `;
 
 function App() {
