@@ -15,7 +15,9 @@ height: 70px;
 object-fit: cover
 `;
 
-const StyledFilterContentBody = styled.div``;
+const StyledFilterContentBody = styled.div`
+width: 90px;
+`;
 
 function  NeuesTonic({ntonic}){
 console.log(ntonic)

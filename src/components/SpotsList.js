@@ -8,7 +8,11 @@ const SpotsListStyle = styled.div`
   flex-wrap: wrap;
   width: 100%;
   flex-grow: 1;
-  align-content: flex-start;
+  justify-content: space-around;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: center
+  };
 `;
 
 function SpotsList({ selectedFilter, tasteObject }) {
@@ -55,18 +59,11 @@ function SpotsList({ selectedFilter, tasteObject }) {
         default:
           break;
       }
-
-console.log("Geschmack 1 ist"+tasteObject.Geschmack1)   
-
-
-  /*    if (tasteObject.Geschmack1 !== "kräftig") {
-          return false;
-      }
-  */
+  
 
  switch (tasteObject.Geschmack1) {
-  case "kräftig":
-    if (gin.taste.includes("kräftig") !== true) {
+  case "Herb":
+    if (gin.taste.includes("Herb") !== true) {
       return false;
     }
 break;
@@ -77,8 +74,8 @@ break;
   }
 
   switch (tasteObject.Geschmack2) {
-    case "fruchtig":
-      if (gin.taste.includes("fruchtig") !== true) {
+    case "Fruchtig":
+      if (gin.taste.includes("Fruchtig") !== true) {
         return false;
       }
   break;
@@ -89,8 +86,75 @@ break;
     }
 
     switch (tasteObject.Geschmack3) {
-      case "süß":
-        if (gin.taste.includes("süß") !== true) {
+      case "Süßlich":
+        if (gin.taste.includes("Süßlich") !== true) {
+          return false;
+        }
+    break;
+    
+    
+      default:
+        break;
+      }
+switch (tasteObject.Geschmack4) {
+      case "Trocken":
+        if (gin.taste.includes("Trocken") !== true) {
+          return false;
+        }
+    break;
+    
+    
+      default:
+        break;
+      }
+switch (tasteObject.Geschmack5) {
+      case "Würzig":
+        if (gin.taste.includes("Würzig") !== true) {
+          return false;
+        }
+    break;
+    
+    
+      default:
+        break;
+      }     
+switch (tasteObject.Geschmack6) {
+      case "Wacholder":
+        if (gin.taste.includes("Wacholder") !== true) {
+          return false;
+        }
+    break;
+    
+    
+      default:
+        break;
+      } 
+      switch (tasteObject.Geschmack7) {
+        case "Zitrus":
+          if (gin.taste.includes("Zitrus") !== true) {
+            return false;
+          }
+      break;
+      
+      
+        default:
+          break;
+        }
+
+switch (tasteObject.Geschmack8) {
+      case "Kräuter":
+        if (gin.taste.includes("Kräuter") !== true) {
+          return false;
+        }
+    break;
+    
+    
+      default:
+        break;
+      }
+switch (tasteObject.Geschmack9) {
+      case "Floral":
+        if (gin.taste.includes("Floral") !== true) {
           return false;
         }
     break;
@@ -103,23 +167,75 @@ break;
     
 
     switch (selectedFilter.Land) {
-      case "portugal":
-        if (gin.country !== "portugal") {
+      case "Deutschland":
+        if (gin.country !== "Deutschland") {
           return false;
         }
         break;
-      case "deutschland":
-        if (gin.country !== "deutschland") {
+      case "Spanien":
+        if (gin.country !== "Spanien") {
           return false;
         }
         break;
-      case "schweiz":
-        if (gin.country !== "schweiz") {
+      case "Großbritanien":
+        if (gin.country !== "Großbritanien") {
           return false;
         }
         break;
-      case "spanien":
-        if (gin.country !== "spanien") {
+      case "Schottland":
+        if (gin.country !== "Schottland") {
+          return false;
+        }
+        break;
+      case "Japan":
+        if (gin.country !== "Japan") {
+          return false;
+        }
+        break;
+
+      default:
+        break;
+      }
+
+
+    switch (selectedFilter.GinKategorie) {
+      case "London Dry Gin":
+        if (gin.category !== "London Dry Gin") {
+          return false;
+        }
+        break;
+      case "Dry Gin / Destillierter Gin":
+        if (gin.category !== "Dry Gin / Destillierter Gin") {
+          return false;
+        }
+        break;
+      case "(Sloe Gin)":
+        if (gin.category !== "(Sloe Gin)") {
+          return false;
+        }
+        break;
+      case "New Western Dry Gin":
+        if (gin.category !== "New Western Dry Gin") {
+          return false;
+        }
+        break;
+      case "Old Tom Gin":
+        if (gin.category !== "Old Tom Gin") {
+          return false;
+        }
+        break;
+      case "Reserve Gin / Aged Gin":
+        if (gin.category !== "Reserve Gin / Aged Gin") {
+          return false;
+        }
+        break;
+      case "Cordial Gin":
+        if (gin.category !== "Cordial Gin") {
+          return false;
+        }
+        break;
+      case "Pink Gin":
+        if (gin.category !== "Pink Gin") {
           return false;
         }
         break;

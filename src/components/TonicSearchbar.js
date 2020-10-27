@@ -8,7 +8,8 @@ const StyledDiv = styled.div`
 margin:15px 10px;
 border: 1px solid;
 display: flex;
-justify-content: center`;
+justify-content: center;
+flex-wrap: wrap;`;
 
 
 

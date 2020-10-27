@@ -124,17 +124,22 @@ console.log(gefiltertesHallo)
   }
 return (
     <SpotStyle backgroundColor="rgba(0,0,0,0.85)" onClick={() => sethallo(hallo + drink.title)}>
-      <Container1>
-      <Spotimg src={drink.imgSrc} alt={drink.title} />
-      
-        <h3>{drink.title}</h3>
-        <SpotCategory> {drink.country}</SpotCategory>
-
-        <SpotDistance>{drink.price} €</SpotDistance>
-
-        <SpotRating>{drink.taste}</SpotRating>
+        <Container1>
+        <Spotimg src={drink.imgSrc} alt={drink.title} />
         
-        </Container1>
+          <h3>{drink.title}</h3>
+          <BadgeContainer>
+          <DescriptionWrapper>Herkunft: <SpotCategory>{drink.country}</SpotCategory></DescriptionWrapper>
+          <DescriptionWrapper>Preis/l:<SpotDistance>{drink.price}€</SpotDistance></DescriptionWrapper>
+          <DescriptionWrapper>Geschmack:{drink.taste.map(drink=>{return <DescriptionWrapper> 
+            <RatingWrapper>
+              <SpotRating> {drink} </SpotRating>
+            </RatingWrapper>
+          </DescriptionWrapper>})}
+          </DescriptionWrapper>         
+          </BadgeContainer>
+          </Container1>
+        <LinkButton href={drink.link} target="_blank">Mehr Infos</LinkButton>
         <Container2>
         <TonicSearchbar fS={gefiltertesHallo}/>
         <ZutatenSearchbar fS={gefiltertesHallo}/>

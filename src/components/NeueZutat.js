@@ -13,7 +13,6 @@ object-fit: cover
 `;
 
 const StyledDiv = styled.div`
-
 margin:15px 10px;
 `;
 

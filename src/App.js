@@ -4,9 +4,6 @@ import styled, { ThemeProvider } from "styled-components";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import New from "./pages/New";
-import defaultTheme from "./themes/default";
-import rudundwiß from "./themes/rudundwiß";
-import dark from "./themes/dark";
 
 const MainStyle = styled.div`
   display: flex;
